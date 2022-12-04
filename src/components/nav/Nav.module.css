@@ -1,0 +1,90 @@
+.Navl {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 5vh;
+  background-color: darkslategray;
+  border: 2px solid mediumblue;
+  align-items: center;
+  padding: 0.5em;
+  position: sticky;
+}
+
+.NavLinks {
+  display: flex;
+  flex-direction: row;
+  width: 12rem;
+  height: 2rem;
+  justify-content: left;
+  align-items: center;
+  margin: 0 0.5rem;
+  gap: 1rem;
+}
+
+.BarLinks {
+  display: flex;
+  flex-direction: row;
+  width: 28rem;
+  height: 2rem;
+  justify-content: right;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+.barli {
+  color: bisque;
+  text-decoration: none;
+}
+
+.barli:hover {
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.Btn,
+.BtnOut {
+  width: 6rem;
+  height: 2rem;
+  border: 1px solid black;
+  background-color: gold;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.BtnOut {
+  background-color: #ff2f00;
+  color: white;
+  margin-left: 2rem;
+}
+
+.Btn:hover {
+  background-color: #008b82;
+  box-shadow: 5px 5px 5px black;
+  color: bisque;
+  cursor: pointer;
+}
+
+.BtnOut:hover {
+  background-color: #fffb00;
+  box-shadow: 5px 5px 5px black;
+  color: red;
+  cursor: pointer;
+}
+
+@media (min-width: 578px) {
+  
+  .Navl {
+    height: 10vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .BarLinks {
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 1rem;
+  }
+
+}

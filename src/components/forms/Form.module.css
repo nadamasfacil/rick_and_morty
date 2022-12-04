@@ -1,0 +1,59 @@
+.userContain {
+  display: flex;
+  width: 100vw;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+.userLogin {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 42vw;
+  height: 30vh;
+  padding: 1rem;
+  background-color: darkcyan;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.userInputs {
+  display: flex;
+  flex-direction: row;
+  width: 5rem;
+  height: 1.5rem;
+  justify-content: left;
+}
+
+.userInputs label,
+.userInputs input {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.userInputs input {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+.userLogin button {
+  width: 6rem;
+  height: 2rem;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #e0e041;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.warning {
+  color: #ffff00;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  background-color: #ff0000;
+}

@@ -1,38 +1,195 @@
+@font-face {
+  font-family: rick_and_morty;
+  src: url("../assets/font-rickandmorty/get_schwifty.ttf");
+}
+
 .App {
-  text-align: center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  height:100vh;
+  margin: 0;
+  padding-top: 1rem;
+  background-image: url("../assets/rymfondo.jpg");
+  background-size: cover;
+  /* background-position: 70%; */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.verLogoMobil {
+  width: 35vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+header h1{
+  width: 95vw;
+  height: auto;
+  font-family: rick_and_morty;
+  font-size: 3.5rem;
+  color: red;
+  text-shadow: 4px 2px #171513;
+  font-weight: bolder;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.cardContainer {
+  width: 100vw;
+  height: 70vmax;
+  background-image: url('../assets/rymfondo2.jpg');
+  background-size: cover;
+}
+
+footer {
+  width: 100vw;
+  height: 10vh;
+  background-image: url('../assets/rympie.jpg');
+  background-size: contain;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 577px) {
+
+.verLogo {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+
+
+@media (min-width: 768px) {
+
+  header {
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    background-image: none;
+    background-image: url('../assets/rymportada2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: black;
+    justify-content: flex-start;
+  }
+ 
+  .verLogo {
+    width: 15vw;
+    height: auto;
+    margin-left: 2rem;
+  }
+
+  header h1 {
+   display: none;
+  }
+
+
+  .verLogoMobil {
+    display: none;
   }
 }
+
+@media (min-width: 1022px) {
+
+  .Header {
+    display:flex;
+    flex-direction: row;
+    width: auto;
+    height: 35vh;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+ 
+  .sectionLogo img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sectionTitle {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sectionTitle h1{
+    width: 100%;
+    font-size: 3.5rem;
+    position: absolute;
+    align-items: center;
+  }
+
+  .CardHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3em;
+    margin-right: 4em;
+  }
+
+  .CardHeader .titleCard1 {
+    display: block;
+    margin: 0 0 0 3em;
+  }
+
+  .CardHeader .titleCard2 {
+    display: block;
+    margin: 0 3em 0 0;
+  }
+
+  .verLogoMobil {
+    display: none;
+  }
+}
+
+/* https://betterstudio.com/fonts/rick-and-morty-font/#:~:text=Rick%20and%20Morty%20Use%20What,uppercase%2C%20lowercase%2C%20and%20numbers */
+
+/* @media (min-width: 578px) {
+
+  .Header {
+    display:flex;
+    flex-direction: row;
+    width: auto;
+    height: 35vh;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+ 
+  .sectionLogo img {
+    width: 200px;
+    height: 200px;
+    background-color: #03022381;
+    border-right: 2px solid black;
+  }
+
+  .sectionTitle {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sectionTitle h1{
+    width: 100%;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .CardHeader {
+    display: none;
+  }
+
+  .verLogoMobil {
+    display: none;
+  }
+} */
