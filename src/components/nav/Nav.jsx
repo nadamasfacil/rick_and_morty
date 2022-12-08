@@ -12,6 +12,7 @@ export default function Nav (props) {
       <div className={styled.NavLinks} >
         <Link className={styled.barli} to='/home' ><h3>Home</h3></Link>
         <Link className={styled.barli} to='/about' ><h3>About</h3></Link>
+        <Link className={styled.barli} to='/favorites' ><h3>Favorites</h3></Link>
       </div>
       <div className={styled.BarLinks} >
         <SearchBar

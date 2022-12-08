@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react';
 import {Routes, Route, useLocation, useNavigate} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import './App.css';
 import Form from './components/forms/Form.jsx';
 import Cards from './components/cards/Cards.jsx';
 import Nav from './components/nav/Nav.jsx';
 import About from './components/about/About.jsx'
 import Details from './components/details/Details.jsx';
+import Favorites from './components/favorites/Favorites.jsx';
 import logo from './logonadamasfaciltransparente2.png';
 import logoMobil from './nadamasfacil-negro.jpg';
+import { delete_favorites } from './redux/actions';
 
 export default function App () {
 
@@ -15,11 +18,12 @@ export default function App () {
 
   const [access, setAccess] =React.useState(false);
 
-  const userName = 'nadamasfacil.mb@gmail.com';
-  const passWord = '1234567890';
+  const userName = 'nada@gmail.com';
+  const passWord = '123456';
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location);
+  const dispatch = useDispatch();
 
   function onSearch(char) {
     console.log(searchChar(char));
@@ -57,7 +61,8 @@ export default function App () {
   }
 
   function onClose(char) {
-    setPersonas(personas.filter((ele) => ele.id !== char))
+    setPersonas(personas.filter((ele) => ele.id !== char));
+    dispatch(delete_favorites(char));
   }
 
   function islogin(userData) {
@@ -68,10 +73,10 @@ export default function App () {
       console.log('passWord ',passWord);
       setAccess(true);
       navigate('/home');
-    }
+    } else alert('Datos incorrectos');
   }
 
-  function islogout(userData) {
+  function islogout() {
       setAccess(false);
   }
 
@@ -99,6 +104,7 @@ export default function App () {
         />
         <Route path='/about' element={<About />} />
         <Route path='/details/:detailId' element={<Details />} />
+        <Route path='/favorites' element={<Favorites />} />
       </Routes>
       </section>
       <footer>

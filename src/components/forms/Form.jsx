@@ -3,20 +3,20 @@ import styled from './Form.module.css'
 import validation from './validation';
 
 
-export default function Form(login) {
+export default function Form({login}) {
 
-  const [userData, setUserData] = React.useState({ username: '', password: '' });
+  const [userData, setUserData] = React.useState({ username: 'nada@gmail.com', password: '123456' });
 
   const [errors, setErrors] = React.useState({ username: '', password: '' });
 
   function handleInputChange (e) {
-    e.preventDefault();
     setUserData({...userData, [e.target.name]: e.target.value});
-    setErrors(validation(userData));
+    setErrors(validation({...userData, [e.target.name]: e.target.value}));
   }
 
-  function handleSubmit () {
-    login.login(userData);
+  function handleSubmit (e) {
+    e.preventDefault();
+    login(userData);
   }
 
   return (
@@ -28,7 +28,7 @@ export default function Form(login) {
         id="username"
         name="username" 
         type="text" 
-        value={userData.name} 
+        value={userData.username} 
         onChange={handleInputChange} />
         </div>
         <p className={styled.warning} >{errors.name}</p>
