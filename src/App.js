@@ -46,11 +46,14 @@ export default function App () {
   }
 
   function searchChar(dat) {
-    console.log(dat);
+    // console.log(dat);
+    // console.log(typeof dat);
     for (let i=0; i<personas.length; i++) {
-      console.log(i);
-      console.log(personas[i].id);
-      if (personas[i].id === dat) {return true;}
+      // console.log(i);
+      // console.log(typeof i);
+      // console.log(personas[i].id);
+      // console.log(typeof personas[i].id);
+      if (parseInt(personas[i].id) === parseInt(dat)) {return true;}
     }
     return false;
   }
