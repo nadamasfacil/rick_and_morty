@@ -14,7 +14,8 @@ function Card(props) {
       props.delete_favorites(props.id);
     } else {
       setIsFav(true);
-      props.add_favorites({id: props.id, name : props.name, image: props.image});
+      props.add_favorites(props);
+      // props.add_favorites({id: props.id, name : props.name, image: props.image});
     }
   }
 
