@@ -46,13 +46,7 @@ export default function App () {
   }
 
   function searchChar(dat) {
-    // console.log(dat);
-    // console.log(typeof dat);
     for (let i=0; i<personas.length; i++) {
-      // console.log(i);
-      // console.log(typeof i);
-      // console.log(personas[i].id);
-      // console.log(typeof personas[i].id);
       if (parseInt(personas[i].id) === parseInt(dat)) {return true;}
     }
     return false;
@@ -70,10 +64,6 @@ export default function App () {
 
   function islogin(userData) {
     if (userData.username === userName && userData.password === passWord){
-      console.log('username ',userData.username);
-      console.log('password ',userData.password);
-      console.log('userName ',userName);
-      console.log('passWord ',passWord);
       setAccess(true);
       navigate('/home');
     } else alert('Datos incorrectos');
@@ -96,23 +86,22 @@ export default function App () {
         <h1>Rick and Morty</h1>
       </header>
       <section className='cardContainer'>
-      {location.pathname !== '/' &&
-      (<Nav onSearch={onSearch} onRandom={onRandom} logout={islogout} />)}
-      <Routes>
-        <Route path='/' element={<Form login={islogin} />} />
-        <Route path='/home' element={
-          <Cards
-          personas={personas}
-          onClose={onClose} />}
-        />
-        <Route path='/about' element={<About />} />
-        <Route path='/details/:detailId' element={<Details />} />
-        <Route path='/favorites' element={<Favorites />} />
-      </Routes>
+        {location.pathname !== '/' &&
+        (<Nav onSearch={onSearch} onRandom={onRandom} logout={islogout} />)}
+        <Routes>
+          <Route path='/' element={<Form login={islogin} />} />
+          <Route path='/home' element={
+            <Cards
+            personas={personas}
+            onClose={onClose} />}
+          />
+          <Route path='/about' element={<About />} />
+          <Route path='/details/:detailId' element={<Details />} />
+          <Route path='/favorites' element={<Favorites />} />
+        </Routes>
+        <br/><br/><br/>
       </section>
-      <footer>
-
-      </footer>
+      <footer></footer>
     </div>
   )
 }

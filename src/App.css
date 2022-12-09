@@ -45,7 +45,7 @@ header h1{
 
 .cardContainer {
   width: 100vw;
-  height: 70vmax;
+  height: 80vmin;
   background-image: url('../assets/rymfondo2.jpg');
   background-size: cover;
 }
@@ -95,6 +95,11 @@ footer {
    display: none;
   }
 
+  .cardContainer {
+    width: 100vw;
+    height: auto;
+    background-size: 50%;
+  }
 
   .verLogoMobil {
     display: none;
